@@ -32,8 +32,12 @@ class ReadZclean(TaskList):
         self.get_row_split(i)
         self.get_date()
         self.get_time()
+        print('----------------------------------------------------------------')
         self.get_instance()
+        print('Date\t\t:',self.date)
+        print('Instance\t:',self.instance)
         self.input_df()
+        print('----------------------------------------------------------------')
       except:
         pass
     self.create_excel()
