@@ -12,10 +12,6 @@ class ReadRestartInstance(TaskList) :
   def input_month(self):
     self.month = input('Input bulan/tahun (BB/TTTT) : ')
 
-  def read_file(self):
-    with open(self.file_name, 'r') as f :
-      self.data = f.read().split("\n\n")
-
   def get_date(self):
     self.date = self.row_split[1].split(' ')[0] + f'/{self.month}'
 
@@ -34,15 +30,6 @@ class ReadRestartInstance(TaskList) :
 
   def get_instance(self):
     self.instance = self.raw.split(']')[0].split(' , ')
-
-  def input_df(self):
-    for i in self.instance :
-      if len(i) > 0 :
-        self.df = self.df._append({'date' : self.date , 'task_action_list': 'Restart Instance', 'task_item':i,'description':'port down','start_time' : self.time_start, 'response_time' : self.respone_time ,'escalation_time' : self.escalation ,'end_time' : self.time_end ,'status' : 'Success'},ignore_index = True)
-
-  def create_excel(self):
-    self.df = self.df.reset_index(drop=True)
-    self.df.to_excel('Template_task_list_v2.xlsx',index=False)
 
   def get_row_split(self, cell):
     self.row_split = cell.split('\n')
