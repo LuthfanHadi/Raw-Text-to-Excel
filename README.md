@@ -2,7 +2,7 @@
 
 ## Description
 
-This project is a Python program consisting of several modules for managing action to documentation restart and clean memory instances. Below is a description of each module:
+This project is a Python program consisting of several modules for managing documentation restart and clean memory instances on server. Program input is txt file that have contain log of history for restart and clean memory instances. After that the program do parsing the log and save it as xlx. Below is a description of each module:
 
 ### Modules
 
