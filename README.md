@@ -57,5 +57,5 @@ This project is a Python program consisting of several modules for managing acti
 
 1. Clone this repository:
    ```bash
-git clone https://github.com/LuthfanHadi/Raw-Text-to-Excel.git
+   git clone https://github.com/LuthfanHadi/Raw-Text-to-Excel.git
 
